@@ -1,0 +1,350 @@
+body { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header { 
+    background-color: #fff;
+    padding-top: 5px;
+    position: relative;
+    z-index: 110;
+}
+
+.over-menu { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-logo { 
+    flex: 2;
+    margin-top: 10px;
+}
+
+.header-menu { 
+    flex:5;
+    margin-top: 25px;
+    padding: 0 20px;
+}
+
+.header-mobile-menu { 
+    display: none;
+}
+
+.header-contact { 
+    margin-top: 5px;
+    flex:5;
+}
+
+.pre-phone { 
+    font-size: 28px;
+    font-weight: normal;
+}
+
+
+
+.phone { 
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.btn-future {
+    border: 2px solid #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #ff8200;
+    background-image: -webkit-linear-gradient(top, #f93, #f60);
+    background-image: -moz-linear-gradient(top, #f93, #f60);
+    background-image: -o-linear-gradient(top, #f93, #f60);
+    background-image: -ms-linear-gradient(top, #f93, #f60);
+    background-image: linear-gradient(to bottom, #f93, #f60);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.action > a:after {
+    content: "";
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nav > .action > a {
+    position: relative;
+    display: inline;
+    padding: 3px 25px 7px 15px;
+    line-height: 20px;
+    color: #fff;
+    background: #ff8c00;
+}
+
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+li { 
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.menu nav {
+    font-family: monospace;
+}
+
+.menu ul {
+  
+  background: darkorange;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu ul .container { 
+    display: flex;
+}
+
+.menu li {
+    color: #fff;
+  background: darkorange;
+    display: block;
+    float: left;
+    flex:1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+.menu li a {
+  color: #fff;
+}
+
+.menu li:hover,
+.menu li:focus-within {
+    background: red;
+    cursor: pointer;
+}
+
+.menu li:focus-within a {
+  outline: none;
+}
+
+.menu ul li ul {
+    background: orange;
+    visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+    position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+    left: 0;
+  display: none;
+}
+
+.menu ul li:hover > ul,
+.menu ul li:focus-within > ul,
+.menu ul li ul:hover,
+.menu ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+.menu ul li ul li {
+    clear: both;
+  width: 100%;
+}
+
+.menu { 
+    width: 100%;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* стили для обёртки, в которой заключены слайды */
+  .slider__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* стили для контейнера слайдов */
+  .slider__items {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  /* стили для слайдов */
+  .slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* стили для кнопок "вперед" и "назад" */
+  .slider__control {
+    position: absolute;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    height: 50px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .slider__control_show {
+    display: flex;
+  }
+
+  .slider__control:hover,
+  .slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+  }
+
+  .slider__control_prev {
+    left: 0;
+  }
+
+  .slider__control_next {
+    right: 0;
+  }
+
+  .slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .slider__control_prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+
+  .slider__control_next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+
+  /* стили для индикаторов */
+  .slider__indicators {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .slider__indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 4px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  .slider__indicators li.active {
+    background-color: #fff;
+  }
+
+  /* для стилизации текущего слайдера */
+  .img-fluid {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .slider__item div{ 
+      text-align: center;
+      padding: 5%;
+  }
+
+  .slider__item div h2 { 
+      font-size: 80px;
+      text-shadow: 0 0 3px #000;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #fff;
+  }
+
+  .slider__item div strong { 
+    font-size: 32px;
+    text-shadow: 0 0 3px #000;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .btn-primary { 
+    margin-top: 10vh;
+    padding: 6px 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    background-color: #ff8200;
+    background-image: linear-gradient(to bottom, #f93, #f60);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    line-height: 1.33;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+  }
+
+  
