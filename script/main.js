@@ -2,7 +2,7 @@
 'use strict';
 
 var slideShow = (function () {
-    
+
   return function (selector, config) {
     var
       _slider = document.querySelector(selector), // основный элемент блока
@@ -218,4 +218,39 @@ var slideShow = (function () {
 slideShow('.slider', {
   isAutoplay: true
 });
+
+
+
+
+const getNextQuestion = () => {
+  if (questionNumber == 3) {
+    getForm();
+  }
+
+  else { 
+  const questionTemplate = document.getElementById('question');
+  const firstAnsverTemplate = document.getElementById('first-ansver');
+  const secondAnsverTemplate = document.getElementById('second-ansver');
+  const firstAsnverContent = document.getElementById('first-ansver-content');
+  const secondAnsverContent = document.getElementById('second-ansver-content');
+  const progressBar = document.getElementById('progressBar');
+
+  questionTemplate.innerHTML = Questions[questionNumber].question;
+  firstAnsverTemplate.innerHTML = Questions[questionNumber].firstAnsver;
+  secondAnsverTemplate.innerHTML = Questions[questionNumber].secondAnscer;
+
+  firstAsnverContent.innerHTML =
+    `<img src="./media/${Questions[questionNumber].fisrtImage}" onclick="getNextQuestion()" alt="">
+<p>${Questions[questionNumber].firstLabel}</p>`
+  secondAnsverContent.innerHTML =
+    `<img src="./media/${Questions[questionNumber].secondImage}" onclick="getNextQuestion()" alt="">
+<p>${Questions[questionNumber].secondLabel}</p>`
+
+  progressBar.style.width = `${ (questionNumber + 1) * 20 + 20}%`
+  progressBar.innerHTML = `${ (questionNumber + 1) * 20 + 20}%`
+  ++questionNumber;
+  }
+  
+}
+
 
